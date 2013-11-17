@@ -302,49 +302,57 @@ footer a {
 //creamos los arrays que compondran nuestro formulario
 //primer array con el input que se llamará nombre y será donde introduciremos el mismo
  
-    $nombre = array(
-        'name' => 'nombre',
-        'id' => 'nombre',
+    $autor = array(
+        'name' => 'autor',
+        'id' => 'autor',
         'size' => '50',
         'style' => 'width:50%',
-        'value' => set_value('nombre') // con esto al procesar el formulario de forma incorrecta quedará guardado el dato que le habíamos puesto
+        'value' => set_value('autor') // con esto al procesar el formulario de forma incorrecta quedará guardado el dato que le habíamos puesto
     );
  
 //el segundo array(campo email)
  
-    $email = array(
-        'name' => 'email',
-        'id' => 'email',
+    $titulo = array(
+        'name' => 'titulo',
+        'id' => 'titulo',
         'size' => '50',
         'style' => 'width:50%',
-        'id' => 'email',
-        'value' => set_value('email')
+        'id' => 'titulo',
+        'value' => set_value('titulo')
     );
  
 //el tercero...(campo asunto)
-    $asunto = array(
-        'name' => 'asunto',
-        'id' => 'asunto',
+    $descripcion = array(
+        'name' => 'descripcion',
+        'id' => 'descripcion',
         'size' => '50',
         'style' => 'width:50%',
-        'value' => set_value('asunto')
+        'value' => set_value('descripcion')
     );
  
 //el cuarto...(campo mensaje)
-    $mensaje = array(
-        'name' => 'mensaje',
-        'id' => 'mensaje',
+    $resumen = array(
+        'name' => 'resumen',
+        'id' => 'resumen',
         'rows' => 10,
         'cols' => 40,
-        'value' => set_value('mensaje')
+        'value' => set_value('resumen')
+    );
+
+    $archivo = array(
+        'name' => 'archivo',
+        'id' => 'archivo',
+        'rows' => 10,
+        'cols' => 40,
+        'value' => set_value('archivo')
     );
  
 //el botón submit de nuestro formulario
     $submit = array(
         'name' => 'submit',
         'id' => 'submit',
-        'value' => 'Enviar comentario',
-        'title' => 'Enviar comentario'
+        'value' => 'Subir Tesis',
+        'title' => 'Subir Tesis'
     );
     ?>
 <?php
@@ -353,36 +361,45 @@ echo form_fieldset('Nuevo comentario');
             <table>
                 <tr>
                     <td>
-                        <?php echo form_label('Nombre: '); ?>
+                        <?php echo form_label('Autor: '); ?>
                     </td>
                     <td>
-                        <?php echo form_input($nombre); ?>
+                        <?php echo form_input($autor); ?>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <?php echo form_label('Email: '); ?>
+                        <?php echo form_label('Titulo: '); ?>
                     </td>
                     <td>
-                        <?php echo form_input($email); ?>
+                        <?php echo form_input($titulo); ?>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <?php echo form_label('Asunto: '); ?>
+                        <?php echo form_label('Descripcion: '); ?>
                     </td>
                     <td>
-                        <?php echo form_input($asunto); ?>
+                        <?php echo form_input($descripcion); ?>
                     </td>
                 </tr>
-                 <tr>
+                <tr>
                     <td>
-                        <?php echo form_label('Comentario: '); ?>
+                        <?php echo form_label('Resumen: '); ?>
                     </td>
                     <td>
-                        <?php echo form_textarea($mensaje); ?>
+                        <?php echo form_textarea($resumen); ?>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <?php echo form_label('Archivo: '); ?>
+                    </td>
+                    <td>
+                        <?php echo form_textarea($archivo); ?>
+                    </td>
+                </tr>
+                
                 <tr>
                     <td>
  

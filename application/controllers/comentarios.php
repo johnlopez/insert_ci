@@ -46,7 +46,7 @@ class Comentarios extends CI_Controller
                 $asunto = $this->input->post('asunto');                            
                 $mensaje = $this->input->post('mensaje');
                 //conseguimos la hora de nuestro país, en mi caso españa
-                date_default_timezone_set("Europe/Madrid");
+                date_default_timezone_set("Chile/Continental");
                 $fecha = date('Y-m-d');
                  $hora= date("H:i:s");
                 //ahora procesamos los datos hacía el modelo que debemos crear
